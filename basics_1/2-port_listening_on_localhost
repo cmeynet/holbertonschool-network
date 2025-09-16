@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 
+# Bash script that listens on port 98 on localhost.
 
 # Check that nc is installed
 if ! command -v nc >/dev/null 2>&1; then
