@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 # Bash script that displays all active IPv4 IPs on the machine it’s executed on.
 
-for ip in $(hostname -I); do
-    echo "$ip"
-done
+ifconfig | grep 'inet ' | awk '{print $2}'
