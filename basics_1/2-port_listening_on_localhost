@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# 
+
+# Check that nc is installed
+if ! command -v nc >/dev/null 2>&1; then
+    echo "Error: nc (netcat) is not installed."
+    exit 1
+fi
+
+echo "Starting my script. Listening on localhost:98..."
+
+# Listens on localhost:98 and displays anything received
+nc -l 127.0.0.1 98
